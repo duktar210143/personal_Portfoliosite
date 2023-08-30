@@ -1,5 +1,6 @@
 import 'package:portfoliosite/widgets/all_imports.dart';
 
+
 class ProjectCard extends StatelessWidget {
   final Function() onTap;
   final ProjectModel? project;
@@ -46,6 +47,14 @@ class ProjectCard extends StatelessWidget {
                           height: 1.5,
                           maxlines: 5,
                           textOverflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 30,),
+                          CustomButton(
+                            title: 'More',
+                            width: 120,
+                            height: 38,
+                            icon: FontAwesomeIcons.link,
+                            onTap: onTap,
                           )
                     ],
                   ),

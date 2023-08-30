@@ -31,3 +31,7 @@ export 'package:portfoliosite/view/home/project/project_card.dart';
 export  'package:portfoliosite/view/home/project/project.dart';
 
 export 'package:portfoliosite/view/home/project/project_details.dart';
+
+export 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+export 'package:portfoliosite/widgets/custom_button.dart';
