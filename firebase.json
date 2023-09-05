@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "public": "web" // Replace "web" with the directory containing your web files.
+  },
+  "storage": {
+    "rules": "new-storage-rules"
+  }
+}

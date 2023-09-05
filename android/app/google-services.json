@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "101321901822",
+    "project_id": "portfoliosite-ca617",
+    "storage_bucket": "portfoliosite-ca617.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101321901822:android:ac5819d345f431d5e447af",
+        "android_client_info": {
+          "package_name": "com.adbytee.developer_portfolio_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101321901822-qcflc5mv8r244mnq5de6ku783iqniqfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCmnUI7Ww3GgIlol83HT_mP6wFHg-X9RU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101321901822-qcflc5mv8r244mnq5de6ku783iqniqfj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "101321901822-4co6e4lk0992gidrhgnsjpcrmagpp21p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.portfoliosite.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

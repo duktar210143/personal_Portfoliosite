@@ -1,4 +1,5 @@
 import 'package:portfoliosite/widgets/all_imports.dart';
+import 'package:portfoliosite/widgets/show_details.dart';
 
 class Project extends StatefulWidget {
   final ProjectController project;
@@ -41,13 +42,25 @@ class _ProjectState extends State<Project> {
             children: List.generate(
               widget.project.projectList.length,
               (I) {
-                final Project = widget.project.projectList[I];
+                final project = widget.project.projectList[I];
                 return ProjectCard(
                   onTap: () {
-
+                    if (Responsive.isMobile(context)) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ProjectDetails(data: project),
+                        ),
+                      );
+                    } else {
+                      showDetails(
+                        context: context,
+                        child: ProjectDetails(data: project),
+                      );
+                    }
                   },
-                  project: Project,
-                  top: Project.top,
+                  project: project,
+                  top: project.top,
                 );
               },
             ),

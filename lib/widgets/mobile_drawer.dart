@@ -8,7 +8,7 @@ class MobileDrawer extends StatelessWidget {
     this.about,
     this.project,
     this.skill,
-  });
+  }):super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,23 @@ class MobileDrawer extends StatelessWidget {
               );
             },
             title: const TopMenuItem(
-              
+              title: 'About me',
+              fontsize: 20,
             ),
-          )
+          ),
+          const SizedBox(height: 20.0,),
+          ListTile(
+            onTap: (){
+              Scrollable.ensureVisible(
+                project!.currentState!.context,
+                duration: const Duration(seconds: 1),
+              );
+            },
+            title: const TopMenuItem(
+              title: 'Project',
+              fontsize: 20,
+            ),
+          ),
         ],
       ),
     );

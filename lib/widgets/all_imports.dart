@@ -35,3 +35,13 @@ export 'package:portfoliosite/view/home/project/project_details.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 export 'package:portfoliosite/widgets/custom_button.dart';
+
+export 'package:url_launcher/url_launcher.dart';
+
+export 'package:cached_network_image/cached_network_image.dart';
+
+export 'package:portfoliosite/widgets/show_image_preview.dart';
+
+export 'package:portfoliosite/widgets/show_details.dart';
+
+export 'package:portfoliosite/controller/skills_controller.dart';

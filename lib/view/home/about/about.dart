@@ -30,7 +30,7 @@ class _AboutState extends State<About> {
                       alignment: Alignment.centerLeft,
                       padding: const EdgeInsets.all(20),
                       child: SvgPicture.asset(
-                        'icons/coding.svg',
+                      'assets/icons/coding.svg',
                         height: 200,
                         width: 200,
                       ),
@@ -69,7 +69,7 @@ class _AboutState extends State<About> {
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(20),
                     child: SvgPicture.asset(
-                      'icons/coding.svg',
+                      'assets/icons/coding.svg',
                       height: 200,
                       width: 200,
                     ),

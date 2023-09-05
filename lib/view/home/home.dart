@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
           ? const SizedBox()
           : MobileDrawer(
               about: aboutKey,
+        project: projectKey,
             ),
       body: SafeArea(
           child: SingleChildScrollView(
@@ -53,12 +54,12 @@ class _HomeState extends State<Home> {
                       duration: const Duration(seconds: 1),
                     );
                   },
-                  // project: () {
-                  //   Scrollable.ensureVisible(
-                  //     projectKey.currentState!.context,
-                  //     duration: const Duration(seconds: 1),
-                  //   );
-                  // },
+                  project: () {
+                    Scrollable.ensureVisible(
+                      projectKey.currentState!.context,
+                      duration: const Duration(seconds: 1),
+                    );
+                  },
                   //  skills: (){
                   //   Scrollable.ensureVisible(
                   //     skillsKey.currentState!.context,
@@ -70,6 +71,9 @@ class _HomeState extends State<Home> {
               HeroCta(key: topkey,),
               const CustomDivider(),
               About(key: aboutKey,),
+              const CustomDivider(),
+              Project(key: projectKey,project: project,),
+              const CustomDivider(),
         ]),
       )),
     );
