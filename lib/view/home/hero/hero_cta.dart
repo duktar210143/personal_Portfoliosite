@@ -53,7 +53,7 @@ class _HeroCtaState extends State<HeroCta> {
                         height: 5.0,
                       ),
                       TextBuilder(
-                        text: "Flutter Developer",
+                        text: "A developer",
                         color: kGreyShade,
                         fontsize: 22,
                         fontweight: FontWeight.w600,

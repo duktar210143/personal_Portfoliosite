@@ -27,7 +27,7 @@ class _ProjectState extends State<Project> {
         children: [
           TextBuilder(
             text: 'Project',
-            color: KWhite,
+            color: Colors.white,
             fontweight: FontWeight.w600,
             fontsize: 30,
           ),

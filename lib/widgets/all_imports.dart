@@ -44,4 +44,10 @@ export 'package:portfoliosite/widgets/show_image_preview.dart';
 
 export 'package:portfoliosite/widgets/show_details.dart';
 
+export 'package:portfoliosite/model/skills_model.dart';
+
 export 'package:portfoliosite/controller/skills_controller.dart';
+
+export 'package:portfoliosite/view/home/skill/skill_card.dart';
+
+export 'package:portfoliosite/view/home/skill/skills.dart';

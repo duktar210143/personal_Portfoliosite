@@ -1,5 +1,5 @@
+import 'package:portfoliosite/footer/footer.dart';
 import 'package:portfoliosite/widgets/all_imports.dart';
-
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -28,54 +28,80 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: drawerkey,
-      backgroundColor: KWhite,
+      backgroundColor: Colors.black,
       drawer: Responsive.isDesktop(context)
           ? const SizedBox()
           : MobileDrawer(
               about: aboutKey,
-        project: projectKey,
+              project: projectKey,
+              skill: skillsKey,
             ),
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: Column(children: [
-          Responsive.isDesktop(context)
-              ? TopMenu(
-                  key: homeKey,
-                  home: () {
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Responsive.isDesktop(context)
+                  ? TopMenu(
+                      key: homeKey,
+                      home: () {
+                        Scrollable.ensureVisible(
+                          homeKey.currentState!.context,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
+                      about: () {
+                        Scrollable.ensureVisible(
+                          aboutKey.currentState!.context,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
+                      project: () {
+                        Scrollable.ensureVisible(
+                          projectKey.currentState!.context,
+                          duration: const Duration(seconds: 1),
+                        );
+                      },
+                      skills: () {
+                        Scrollable.ensureVisible(
+                          skillsKey.currentState!.context,
+                          duration: const Duration(seconds: 1),
+                        );
+                      })
+                  : MobileHeader(drawerkey: drawerkey),
+              HeroCta(
+                key: topkey,
+              ),
+              const CustomDivider(),
+              About(
+                key: aboutKey,
+              ),
+              const CustomDivider(),
+              Project(
+                key: projectKey,
+                project: project,
+              ),
+              const CustomDivider(),
+              Skills(key: skillsKey),
+              const CustomDivider(),
+              Footer(
+                clickOnTop: () {
+                  if (Responsive.isDesktop(context)) {
                     Scrollable.ensureVisible(
                       homeKey.currentState!.context,
                       duration: const Duration(seconds: 1),
                     );
-                  },
-                  
-                  about: () {
+                  } else {
                     Scrollable.ensureVisible(
-                      aboutKey.currentState!.context,
+                      topkey.currentState!.context,
                       duration: const Duration(seconds: 1),
-                    );
-                  },
-                  project: () {
-                    Scrollable.ensureVisible(
-                      projectKey.currentState!.context,
-                      duration: const Duration(seconds: 1),
-                    );
-                  },
-                  //  skills: (){
-                  //   Scrollable.ensureVisible(
-                  //     skillsKey.currentState!.context,
-                  //     duration: const Duration(seconds: 1),
-                  //   );
-                  // }
-                  )
-              : MobileHeader(drawerkey:drawerkey),
-              HeroCta(key: topkey,),
-              const CustomDivider(),
-              About(key: aboutKey,),
-              const CustomDivider(),
-              Project(key: projectKey,project: project,),
-              const CustomDivider(),
-        ]),
-      )),
+                      );
+                  }
+                },
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

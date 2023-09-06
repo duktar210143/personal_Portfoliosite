@@ -5,3 +5,5 @@ const String about =
 const String emailId = "Duktar13@gmail.com";
 
 const String githubIcon = 'assets/images/githubicon.png';
+const linkedIn = "https://www.linkedin.com/in/duktar-tamang-368882211/";
+const twitter = "https://twitter.com/DuktarTamang";

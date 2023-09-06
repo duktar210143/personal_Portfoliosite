@@ -1,5 +1,4 @@
 import 'package:portfoliosite/widgets/all_imports.dart';
-
 class Skills extends StatefulWidget {
   const Skills({Key? key}) : super(key: key);
 
@@ -21,7 +20,7 @@ class _SkillsState extends State<Skills> {
         children: [
           TextBuilder(
               text: 'Skills',
-            color: Colors.black,
+            color: Colors.white,
             fontweight: FontWeight.w600,
             fontsize: 30,
           ),
@@ -30,12 +29,19 @@ class _SkillsState extends State<Skills> {
             width: Responsive.isMobile(context)?300:500,
             child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: Responsive.isMobile(context)?2:5,
+                  crossAxisCount: Responsive.isMobile(context)?2:4,
                   childAspectRatio: Responsive.isMobile(context)?1/1:1/1.1,
                   mainAxisSpacing: 20,
                   crossAxisSpacing: 20
                 ),
-                itemBuilder: skill.skills.length,
+                itemCount: skill.skills.length,
+              shrinkWrap: true,
+              itemBuilder: (BuildContext context,int i){
+                  return SkillCard(
+                    icons: skill.skills[i].icons,
+                    title: skill.skills[i].title,
+                  );
+              },
             ),
           )
 
